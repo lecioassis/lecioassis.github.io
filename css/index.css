@@ -1,4 +1,4 @@
-:root{
+:root {
   --clr-dark-900: #1a1a25;
   --clr-dark-700: ;
   --clr-light-100: #fff;
@@ -7,30 +7,27 @@
   --header-height: 5rem;
 }
 
-
-
-html{
+html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--clr-light-100);
   margin: 0 10px;
 }
 
-body{
+body {
   width: calc(100vw - (100vw - 100%));
   background-color: #000;
   scrollbar-width: thin;
 }
 
-.child{
+.child {
   scroll-snap-align: start;
 }
-
 
 /* header::before{
   content: "";
@@ -47,16 +44,14 @@ body{
   overflow: hidden;
 } */
 
-
-
 /* ##############################################
 ##########        FIRST PAGE         ###########
 ############################################## */
 
-.pags{
+.pags {
   display: flex;
   color: var(--clr-light-100);
-  font-size: 1.5rem ;
+  font-size: 1.5rem;
   align-items: center;
   justify-content: center;
   padding: 0 15%;
@@ -65,15 +60,14 @@ body{
   block-size: fit-content;
 }
 
-
-.nome{ 
+.nome {
   line-height: var(--header-height);
   color: var(--clr-light-100);
   font-size: clamp(50px, 10vw, 100px);
   margin: 1rem;
 }
 
-.subtitulo{
+.subtitulo {
   color: magenta;
   font-family: "Source Code Pro", monospace;
   font-size: clamp(20px, 5vw, 40px);
@@ -81,21 +75,20 @@ body{
   margin: 2rem;
 }
 
-.icon{
+.icon {
   height: calc(5rem + 15vh);
   margin: 1rem;
   filter: invert();
 }
 
-
-header{
+header {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   text-align: center;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   overflow: scroll;
   /* background-image: url("https://i2.wp.com/echo.snu.edu/wp-content/uploads/2019/01/jason-leem-143987-unsplash.jpg"); */
   background-color: black;
@@ -103,39 +96,36 @@ header{
   background-position: fixed;
 }
 
-
 /* ##############################################
 ##########        SECOND PAGE         ###########
 ############################################## */
 
-.second_page{
+.second_page {
   height: 100vh;
   width: 100%;
   position: relative;
 }
 
-embed{  
+embed {
   display: block;
   width: auto;
   height: 100%;
   width: 100%;
 }
 
-
-
 /* ##############################################
 ##########        BUTTONS             ###########
 ############################################## */
 
-.download_font{
+.download_font {
   display: inline-block;
   font-weight: bold;
 }
 
-.download_btn{
+.download_btn {
   color: #000;
   font-size: 1.5rem;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   cursor: pointer;
   height: 3rem;
   width: 12rem;
@@ -148,16 +138,16 @@ embed{
   border: none;
 }
 
-.download_btn:hover{
+.download_btn:hover {
   color: magenta;
   opacity: 0.8;
 }
 
-.download_btn:active{
+.download_btn:active {
   color: limegreen;
 }
 
-.backtop_btn{
+.backtop_btn {
   color: #000;
   font-size: 2rem;
   cursor: pointer;
@@ -172,22 +162,21 @@ embed{
   border: none;
 }
 
-.backtop_btn:hover{
+.backtop_btn:hover {
   color: magenta;
   opacity: 0.8;
 }
 
-.backtop_btn:active{
+.backtop_btn:active {
   color: limegreen;
 }
 
-.anchor_top{
+.anchor_top {
   color: #000;
   font-style: none;
 }
 
-
-.go_down{
+.go_down {
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
@@ -202,21 +191,30 @@ embed{
   padding-top: 3rem;
 }
 
-.cv_font{
+.cv_font {
   display: block;
   font-weight: bold;
 }
 
-
-.go_down:hover{
+.go_down:hover {
   color: magenta;
-  background: linear-gradient(180deg, #fff0 0%, #fff0 35%, rgba(243, 115, 237, 0.199) 100%);
+  background: linear-gradient(
+    180deg,
+    #fff0 0%,
+    #fff0 35%,
+    rgba(243, 115, 237, 0.199) 100%
+  );
   opacity: 0.8;
 }
 
-.go_down:active{
+.go_down:active {
   color: limegreen;
-  background: linear-gradient(180deg, #fff0 0%, #fff0 35%, rgba(115, 243, 153, 0.199) 100%);
+  background: linear-gradient(
+    180deg,
+    #fff0 0%,
+    #fff0 35%,
+    rgba(115, 243, 153, 0.199) 100%
+  );
 }
 
 /* .anchor_top{
@@ -224,16 +222,14 @@ embed{
   font-style: none;
 } */
 
-
 /* .container{
   scroll-snap-type: y mandatory;
 } */
 
-.download_mobile_btn{
-  visibility: hidden;
+.download_mobile_btn {
   color: #000;
   font-size: 1.5rem;
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   cursor: pointer;
   height: 3rem;
   width: 12rem;
@@ -241,9 +237,12 @@ embed{
   border: none;
 }
 
+.hidden {
+  visibility: hidden;
+}
 
 /*####### scrollbar ########*/
- /* width */
+/* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -261,36 +260,32 @@ embed{
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-} 
-
-
-
+}
 
 @media (max-width: 800px) {
-  .second_page{
+  .second_page {
     visibility: hidden;
   }
-  body{
+  body {
     height: 100vh;
     overflow: hidden;
   }
-  .pags{
+  .pags {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 5vh;
   }
-  header{
+  header {
     overflow: scroll;
   }
-  .go_down{
+  .go_down {
     visibility: hidden;
   }
-  a{
+  a {
     padding: 0.5rem;
   }
-  .download_mobile_btn{
+  .hidden {
     visibility: visible;
   }
 }
-
