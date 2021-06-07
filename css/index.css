@@ -1,0 +1,269 @@
+:root{
+  --clr-dark-900: #1a1a25;
+  --clr-dark-700: ;
+  --clr-light-100: #fff;
+  --clr-light-300: ;
+  --clr-accent: ;
+  --header-height: 5rem;
+}
+
+@media (max-width: 800px) {
+  #curriculo{
+    visibility: hidden;
+  }  
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
+a{
+  text-decoration: none;
+  color: var(--clr-light-100);
+  /* margin: 25px; */
+}
+
+body{
+  width: calc(100vw - (100vw - 100%));
+  background-color: #000;
+  scrollbar-width: thin;
+}
+
+.child{
+  scroll-snap-align: start;
+}
+
+
+/* header::before{
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  bottom: 50px;
+  right: 50px;
+  z-index: -1;
+  background-image: url("https://i2.wp.com/echo.snu.edu/wp-content/uploads/2019/01/jason-leem-143987-unsplash.jpg");
+  background-size: cover;
+  background-position: fixed;
+  filter: blur(0.5rem);
+  overflow: hidden;
+} */
+
+
+
+/* ##############################################
+##########        FIRST PAGE         ###########
+############################################## */
+
+.pags{
+  display: flex;
+  line-height: var(--header-height);
+  color: var(--clr-light-100);
+  font-size: 1.5rem ;
+  justify-content: space-between;
+  padding: 0 15%;
+}
+
+.nome{ 
+  line-height: var(--header-height);
+  color: var(--clr-light-100);
+  font-size: 7rem;
+  margin: 1rem;
+}
+
+.subtitulo{
+  color: magenta;
+  font-family: "Source Code Pro", monospace;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.icon{
+  display: inline-block;
+  padding-top: calc(var(--header-height)*0.1);
+  padding-bottom: calc(var(--header-height)*0.1);
+  height: 15rem;
+  margin: 2rem;
+  filter: invert();
+}
+
+.header_body{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header{
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 4rem;
+  overflow: hidden;
+  margin-bottom: 60vh;
+  /* background-image: url("https://i2.wp.com/echo.snu.edu/wp-content/uploads/2019/01/jason-leem-143987-unsplash.jpg"); */
+  background-color: black;
+  background-size: cover;
+  background-position: fixed;
+}
+
+
+/* ##############################################
+##########        SECOND PAGE         ###########
+############################################## */
+
+.second_page{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+embed{  
+  display: block;
+  width: auto;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* ##############################################
+##########        BUTTONS             ###########
+############################################## */
+
+.download_font{
+  display: inline-block;
+  font-weight: bold;
+}
+
+.download_btn{
+  color: #000;
+  font-size: 1.5rem;
+  font-family: 'Anonymous Pro', monospace;
+  cursor: pointer;
+  height: 3rem;
+  width: 12rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 1.5rem;
+  border: none;
+}
+
+.download_btn:hover{
+  color: magenta;
+  opacity: 0.8;
+}
+
+.download_btn:active{
+  color: limegreen;
+}
+
+.backtop_btn{
+  color: #000;
+  font-size: 2rem;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+  border-radius: 50%;
+  border: none;
+}
+
+.backtop_btn:hover{
+  color: magenta;
+  opacity: 0.8;
+}
+
+.backtop_btn:active{
+  color: limegreen;
+}
+
+.anchor_top{
+  color: #000;
+  font-style: none;
+}
+
+
+.go_down{
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+  align-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 80vh;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+.cv_font{
+  display: block;
+  font-weight: bold;
+}
+
+
+.go_down:hover{
+  color: magenta;
+  background: linear-gradient(180deg, #fff0 0%, #fff0 35%, rgba(243, 115, 237, 0.199) 100%);
+  opacity: 0.8;
+}
+
+.go_down:active{
+  color: limegreen;
+  background: linear-gradient(180deg, #fff0 0%, #fff0 35%, rgba(115, 243, 153, 0.199) 100%);
+}
+
+/* .anchor_top{
+  color: #000;
+  font-style: none;
+} */
+
+
+/* .container{
+  scroll-snap-type: y mandatory;
+} */
+
+
+
+
+
+
+
+
+/*####### scrollbar ########*/
+ /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 
+
