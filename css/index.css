@@ -7,11 +7,7 @@
   --header-height: 5rem;
 }
 
-@media (max-width: 800px) {
-  #curriculo{
-    visibility: hidden;
-  }  
-}
+
 
 html{
   scroll-behavior: smooth;
@@ -22,7 +18,7 @@ html{
 a{
   text-decoration: none;
   color: var(--clr-light-100);
-  /* margin: 25px; */
+  margin: 0 10px;
 }
 
 body{
@@ -59,54 +55,48 @@ body{
 
 .pags{
   display: flex;
-  line-height: var(--header-height);
   color: var(--clr-light-100);
   font-size: 1.5rem ;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
   padding: 0 15%;
+  height: fit-content;
+  width: fit-content;
+  block-size: fit-content;
 }
+
 
 .nome{ 
   line-height: var(--header-height);
   color: var(--clr-light-100);
-  font-size: 7rem;
+  font-size: clamp(50px, 10vw, 100px);
   margin: 1rem;
 }
 
 .subtitulo{
   color: magenta;
   font-family: "Source Code Pro", monospace;
-  font-size: 2rem;
+  font-size: clamp(20px, 5vw, 40px);
   font-weight: 300;
+  margin: 2rem;
 }
 
 .icon{
-  display: inline-block;
-  padding-top: calc(var(--header-height)*0.1);
-  padding-bottom: calc(var(--header-height)*0.1);
-  height: 15rem;
-  margin: 2rem;
+  height: calc(5rem + 15vh);
+  margin: 1rem;
   filter: invert();
 }
 
-.header_body{
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
 
 header{
   height: 100vh;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   text-align: center;
   font-family: 'Anonymous Pro', monospace;
-  font-size: 4rem;
-  overflow: hidden;
-  margin-bottom: 60vh;
+  overflow: scroll;
   /* background-image: url("https://i2.wp.com/echo.snu.edu/wp-content/uploads/2019/01/jason-leem-143987-unsplash.jpg"); */
   background-color: black;
   background-size: cover;
@@ -239,11 +229,17 @@ embed{
   scroll-snap-type: y mandatory;
 } */
 
-
-
-
-
-
+.download_mobile_btn{
+  visibility: hidden;
+  color: #000;
+  font-size: 1.5rem;
+  font-family: 'Anonymous Pro', monospace;
+  cursor: pointer;
+  height: 3rem;
+  width: 12rem;
+  border-radius: 1.5rem;
+  border: none;
+}
 
 
 /*####### scrollbar ########*/
@@ -266,4 +262,35 @@ embed{
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 } 
+
+
+
+
+@media (max-width: 800px) {
+  .second_page{
+    visibility: hidden;
+  }
+  body{
+    height: 100vh;
+    overflow: hidden;
+  }
+  .pags{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+  }
+  header{
+    overflow: scroll;
+  }
+  .go_down{
+    visibility: hidden;
+  }
+  a{
+    padding: 0.5rem;
+  }
+  .download_mobile_btn{
+    visibility: visible;
+  }
+}
 
